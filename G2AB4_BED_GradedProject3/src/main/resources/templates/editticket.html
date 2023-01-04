@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta
+	content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+	name="viewport">
+<meta content="ie=edge" http-equiv="X-UA-Compatible">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+	integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+	crossorigin="anonymous">
+<title>Ticket Tracker Application</title>
+</head>
+<body>
+	<div class="container">
+		<header
+			class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+			<a href="/"
+				class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+				Ticket Tracker Application</a>
+
+			<ul
+				class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+				<li><a href="/tickets/" class="nav-link px-2 link-secondary">Tickets</a></li>
+				<li><a href="/tickets/newticket/"
+					class="nav-link px-2 link-dark">New Ticket</a></li>
+			</ul>
+		</header>
+	</div>
+
+	<div class="container">
+
+		<h3>Create Ticket</h3>
+		<hr>
+
+		<form th:action="'/tickets/save?id='+${tickets.id}" method="POST">
+
+			<div class="form-inline">
+				<input class="form-control mb-4 col-4" type="text" name="title"
+					required th:field="${tickets.title}" placeholder="Title">
+			</div>
+
+			<div class="form-inline">
+				<input class="form-control mb-4 col-4" type="text"
+					name="shortDescription" required
+					th:field="${tickets.shortDescription}"
+					placeholder="Short Description">
+			</div>
+
+			<div class="form-inline">
+				<input class="form-control mb-4 col-4" type="text" name="content"
+					required th:field="${tickets.content}" placeholder="Content">
+			</div>
+
+			<button type="submit" class="btn btn-info col-2">Save</button>
+
+		</form>
+
+		<hr>
+		<a href="/tickets/">Back to Books List</a>
+
+	</div>
+
+</body>
+</html>
