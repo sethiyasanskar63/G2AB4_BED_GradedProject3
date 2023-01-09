@@ -1,3 +1,0 @@
-insert into Ticket (title, short_description, content, created_on) values ('Blue Screen of Death','Getting BSoD on opening some apps','I installed a game last month after which I am getting BSoD on running many application.','2022-12-29');
-insert into Ticket (title, short_description, content, created_on) values ('Fan error 90B', 'Getting fan error 90B on startup','I am getting an error 90B stating that I need to get the fan checked on startup everytime','2023-01-01');
-insert into Ticket (title, short_description, content, created_on) values ('Data Redundency Check', 'Getting Data Redundency Check error when trying to install game','I am getting Data Redundency Check error when I try to install GTA using a DVD','2008-2-12');
